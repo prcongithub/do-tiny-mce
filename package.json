@@ -6,9 +6,6 @@
     "start": "NODE_PATH=. nodemon app.js"
   },
   "dependencies": {
-    "aws4": "^1.6.0",
-    "aws2": "*",
-    "async": "0.9.0",
     "body-parser": "1.13.3",
     "connect-assets": "5.2.1",
     "ejs": "2.4.2",
@@ -21,6 +18,7 @@
     "serve-favicon": "2.3.0",
     "uglify-js": "2.6.0",
     "multer": "1.1.0",
-    "mime": "1.3.4"
+    "mime": "1.3.4",
+    "do-assets": "git+ssh://git@github.com/prcongithub/do-assets.git#c1c1237f1afc1e1dc5c0038458a13c8613ce39f0"
   }
 }

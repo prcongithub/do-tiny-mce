@@ -3,7 +3,7 @@ const router = express.Router({
   mergeParams: true
 });
 
-const s3Utils = require('../s3_utils');
+const s3Utils = require('do-assets/s3_utils');
 const fs = require('fs');
 const path = require('path');
 var upload = require("../initmulter").upload;
@@ -19,7 +19,8 @@ router.put('/upload',  upload.single('file'), postFile);
 async function postFile(request, response) {
   //response.send({success: true});
   s3Utils.uploadFile(
-    request, 
+    request.file, 
+    "uploads",
     function(error, attachment){
       try {
         fs.unlink(request.file.path,function(e){
