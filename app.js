@@ -21,7 +21,7 @@ var app = express();
 var logger = require('logger');
 var net = require('net');
 var fs = require("fs");
-var asset_config = JSON.parse(fs.readFileSync(__dirname+'/config/'+process.env.NODE_ENV+'assets.json', "utf8"));
+var asset_config = JSON.parse(fs.readFileSync(__dirname+'/config/assets_'+process.env.NODE_ENV+'.json', "utf8"));
 var assets = require('connect-assets')(asset_config);
 var extensions = require("extensions");
 
