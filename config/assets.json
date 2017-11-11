@@ -9,5 +9,5 @@
   "build": true,
   "compress": false,
   "precompile": ["*.*","**/*.*"],
-  "_servePath": "https://cdndotinymce.jombay.com/assets/"
+  "servePath": "https://prc.ams3.digitaloceanspaces.com/assets/"
 }
