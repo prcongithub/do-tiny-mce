@@ -1,0 +1,13 @@
+{
+  "paths": [
+    "/data/do-tiny-mce/current/assets/js",
+    "/data/do-tiny-mce/current/assets/css",
+    "/data/do-tiny-mce/current/assets/images"
+  ],
+  "buildDir": "/data/do-tiny-mce/current/public/assets",
+  "fingerprinting": true,
+  "build": true,
+  "compress": false,
+  "precompile": ["*.*","**/*.*"],
+  "_servePath": "https://cdndotinymce.jombay.com/assets/"
+}
