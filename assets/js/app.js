@@ -1,7 +1,6 @@
 //= require sha256
 //= require hmac-sha256
 //= require aws-sign-web
-//= require tinymce/tinymce.min
 //= require tinymce-aws-s3-upload-plugin.min
 //= require signature
 /*
