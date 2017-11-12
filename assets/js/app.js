@@ -3,6 +3,7 @@
 //= require aws-sign-web
 //= require tinymce-aws-s3-upload-plugin.min
 //= require signature
+//= require shared/bootstrap.min
 /*
 var spacesConfig = {
   // AWS Region (default: 'eu-west-1')
@@ -24,6 +25,13 @@ tinymce.init({
   // Plugin configuration
   plugins: 'AwsS3Upload',
   toolbar: 'bold italic underline | bullist numlist outdent indent | AwsS3UploadButton',
+  init_instance_callback: function (editor) {
+    editor.on('Change', function (e) {
+      $("#preview").html(
+        tinyMCE.activeEditor.getContent()
+      );
+    });
+  },
   Awss3UploadSettings: {
     buttonText: 'File Upload',  // optional
     // awsAuth: spacesConfig,

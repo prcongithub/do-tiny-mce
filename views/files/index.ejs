@@ -2,12 +2,43 @@
 <html>
   <head>
     <title>Do Hack</title>
-    <script src="//cdn.tinymce.com/4.4/tinymce.min.js"></script>
-    <%- js('app.js') %>
+    <%- css('app.css') %>
   </head>
   <body>
-    <div>
-      <textarea id="tinyMCEContainer"></textarea>
+    <%- include(getView('shared/header')) %>
+    <div class="container-fluid">
+      <div class="row mt-1">
+        <div class="col-sm">
+          TinyMCE Editor:
+        </div>
+        <div class="col-sm">
+          Preview:
+        </div>
+        <div class="col-sm">
+          List of Spaces:
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-sm">
+          <div class="form-group">
+            <textarea class="form-control" rows='5' id="tinyMCEContainer"></textarea>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div id="preview">
+          </div>
+        </div>
+        <div class="col-sm">
+          <ul>
+            <% for(var i = 0; i < data[1].length; i++) { %>
+              <li>
+                <%= data[1][i].Name %>
+              </li>
+            <% } %>
+          </ul>
+        </div>
+      </div>
     </div>
+    <%- include(getView('shared/footer')) %>
   </body>
 </html>

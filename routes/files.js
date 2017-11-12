@@ -11,7 +11,12 @@ var upload = require("../initmulter").upload;
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.render('files/index');
+  s3Utils.listBuckets(function(error, data){
+    res.render('files/index',{
+      error: error,
+      data: data
+    });
+  })
 });
 
 router.put('/upload',  upload.single('file'), postFile);

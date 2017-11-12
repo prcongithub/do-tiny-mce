@@ -1,3 +1,10 @@
+/*
+*= require shared/bootstrap.min
+*/
+
 body {
-  padding-top: 50px;
+  padding-top: 5rem;
+  max-height: calc(100% - 120px);
+  overflow-y: scroll;
 }
+
