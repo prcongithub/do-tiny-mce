@@ -3,8 +3,7 @@
 */
 
 body {
-  padding-top: 5rem;
-  max-height: calc(100% - 120px);
+  margin-top: 5rem;
   overflow-y: scroll;
 }
 
