@@ -19,6 +19,6 @@
     "uglify-js": "2.6.0",
     "multer": "1.1.0",
     "mime": "1.3.4",
-    "do-assets": "git+ssh://git@github.com/prcongithub/do-assets.git#c1c1237f1afc1e1dc5c0038458a13c8613ce39f0"
+    "do-assets": "0.0.1"
   }
 }
